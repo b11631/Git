@@ -169,11 +169,20 @@
 	    };
 	};
 
+var sLib = stringLibrary();
+var nLib = numberLibrary();
+var aLib = arrayLibrary();
 
-var slib = stringLibrary();
-var nlib = numberLibrary();
-var alib = arrayLibrary();
-
-
-
+console.log("Is this a telephone number? " + sLib.validatePhoneNumber("123-456-7890"));
+console.log("Is this an e-mail address? " + sLib.validateEmail("sacrushalot@gmail.com"));
+console.log("Is this a valid URL? " + sLib.validateURL("https://fullsial.com"));
+console.log("My new string will appear as: " + sLib.titleCaseString("My name is Donald"));
+console.log("My string with the new separator will appear as: " + nLib.changeSeparator("a,b,c", "/"));
+console.log("My reformatted number will appear as: " + nLib.formatDecimalPlaces(1.2345, 3));
+console.log("The difference in the two numbers is within the percentage given: " + nLib.fuzzyMatch(10, 8, 25));
+console.log("The difference between the two dates is: " + nLib.daysDifference("November 27, 2012", "September 7, 2012") + " days.");
+console.log("The actual number value of this string number is: " + nLib.actualValue("42"));
+console.log("The smallest value greater than the given number in this array is: " + aLib.smallestValueGreater([50, 10, 11.5, 45, 8, 26, 30, 19], 11));
+console.log("The total value of this array is: " + aLib.totalValueOfArray(["A", 20, true, "B", 30, {a: 3}, "test", 450.5, "346", -100]));
+console.log("The sorted objects in this array will appear as: " + aLib.sortObjectsByKey([{a: 2}, {a: 3}, {a: 1}], "a"));
 
