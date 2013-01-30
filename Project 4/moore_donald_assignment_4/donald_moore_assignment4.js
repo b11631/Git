@@ -2,10 +2,6 @@
 // January 27, 2013
 // Project 4
 //Main Data
-
-//Main Library
-var myLibrary = function () {
-	
 	// String Library
 	var stringLibrary = function () {
 		//Does a string follow a 123-456-7890 pattern like a phone number?
@@ -58,6 +54,12 @@ var myLibrary = function () {
 			    replaceSeparator = string.replace(replaceThis, newSeparator);
 		    return replaceSeparator;
 	    };
+	    return {
+		"validatePhoneNumber": validatePhoneNumber,
+		"validateEmail": validateEmail,
+		"validateURL": validateURL,
+		"changeSepartator": changeSeparator
+	    };
 	};
 
 	//Number Library
@@ -96,6 +98,12 @@ var myLibrary = function () {
 		var actualValue = function (stringNumber) {
 		    var numberValue = Number(stringNumber);
 		    return numberValue;
+	    };
+	    return {
+		"formatDecimalPlaces": formatDecimalPlaces,
+		"fuzzyMatch": fuzzyMatch,
+		"daysDifference": daysDifference,
+		"actualValue": actualValue
 	    };
 	};
 
@@ -154,12 +162,18 @@ var myLibrary = function () {
 		    }
 		    return sortedArray;
 	    };
+	    return {
+		"smallestValueGreater": smallestValueGreater,
+		"totalValueOfArray": totalValueOfArray,
+		"sortObjectsByKey": sortObjectsByKey
+	    };
 	};
-return {
-	"stringLibrary": stringLibrary,
-	"nmuberLibrary": numberLibrary,
-	"arrayLibrary": arrayLibrary
-};
-var lib = new myLibrary();
-};
+
+
+var slib = stringLibrary();
+var nlib = numberLibrary();
+var alib = arrayLibrary();
+
+
+
 
