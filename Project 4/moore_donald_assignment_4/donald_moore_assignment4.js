@@ -58,7 +58,7 @@
 		"validatePhoneNumber": validatePhoneNumber,
 		"validateEmail": validateEmail,
 		"validateURL": validateURL,
-		"changeSepartator": changeSeparator
+		"changeSeparator": changeSeparator,
 	    };
 	};
 
@@ -173,10 +173,11 @@ var sLib = stringLibrary();
 var nLib = numberLibrary();
 var aLib = arrayLibrary();
 
+//Test Area
 console.log("Is this a telephone number? " + sLib.validatePhoneNumber("123-456-7890"));
 console.log("Is this an e-mail address? " + sLib.validateEmail("sacrushalot@gmail.com"));
 console.log("Is this a valid URL? " + sLib.validateURL("https://fullsial.com"));
-console.log("My new string will appear as: " + sLib.titleCaseString("My name is Donald"));
+console.log("My new string will appear as: " + sLib.titleCaseString("My name is donald"));
 console.log("My string with the new separator will appear as: " + nLib.changeSeparator("a,b,c", "/"));
 console.log("My reformatted number will appear as: " + nLib.formatDecimalPlaces(1.2345, 3));
 console.log("The difference in the two numbers is within the percentage given: " + nLib.fuzzyMatch(10, 8, 25));
