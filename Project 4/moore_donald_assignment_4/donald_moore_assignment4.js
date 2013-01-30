@@ -4,49 +4,25 @@
 //Main Data
 
 // String Library
-var StringLibrary = function () {
-	// Checks for a valid phone number
-	// Returns boolean
-	var isPhoneNumUS = function (str) {
-		var re = /\d{3}-\d{3}-\d{4}/;
-		return re.test(str);
-	};
-	// Checks for a valid email address
-	// Returns boolean
-	var isEmailAddr = function (str) {
-		var re = /^\w+@[\w.\-]+\.[A-Za-z]{2,3}$/;
-		return re.test(str);
-	};
-	// Checks for a valid URL
-	// Returns boolean
-	var isUrl = function (str) {
-		var re = /^(?:http|https):/;
-		return re.test(str);
-	};
-	// Capitalize the first character of each word in a string
-	// Returns modified string with the first letter capitalized in each word
-	var splitStrUpper = function (str) {
-		var split = str.split(" ");
-		var result = "";
-		for (var i = 0, j = split.length; i < j; i++) {
-			var spNew = split[i].replace(split[i].charAt(0),(split[i].charAt(0)).toUpperCase());
-			result = result.concat(spNew + " ");
-		};
-		return result;
-	};
-	// Changes the separator to a new given separator ex. a,b,c -> a/b/c
-	var swapSeparator = function (str,newSep) {
-		var re = /\W/g;
-		return str.replace(re,newSep);
-	};
-
-	return {
-		"isPhoneNumUS" : isPhoneNumUS,
-		"isEmailAddr" : isEmailAddr,
-		"isUrl" : isUrl,
-		"splitStrUpper" : splitStrUpper,
-		"swapSeparator" : swapSeparator
-
-	};
+var stringLibrary = function () {
+	//Does a string follow a 123-456-7890 pattern like a phone number?
+	//Returns Boolean
+	 var validatePhoneNumber = function (string) {
+	    if (((string.indexOf("-") === 3) && ((string.lastIndexOf("-")) === 7)) && (string.length === 12)) {
+		    return true;
+	    } else {
+		    return false;
+	    }
+    };
+    
+    //Does a string follow an aaa@bbb.ccc pattern like an email address?
+    //Returns Boolean
+    var validateEmail = function (string) {
+	    var isWhiteSpace = /\s+/g;  // Tests for any white space in the string.
+	    if (((string.indexOf("@") !== -1) && (isWhiteSpace.test(string) === false) && ((string.lastIndexOf(".")) === (string.length - 4)))) {
+		    return true;
+	    } else {
+		    return false;
+	    }
+    };
 };
-
