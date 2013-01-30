@@ -39,7 +39,7 @@ var stringLibrary = function () {
     };
 	
 	//  TITLE CASE STRING (Split into words, then uppercase the first letter of each word.)
-    var titleCaseString = function (string) {  // STILL NEED TO MAKE THIS WORK PROPERLY
+	var titleCaseString = function (string) {  // STILL NEED TO MAKE THIS WORK PROPERLY
 	    var splitString = string.split(" "),
 		    newString,
 		    i;
@@ -47,5 +47,54 @@ var stringLibrary = function () {
 		    newString = splitString[i][0].toUpperCase();
 	    }
 	    return newString;
+    };
+    
+	 //  CHANGE SEPARATOR (Return a string with the first separator changed to the second.)
+	 var changeSeparator = function (string, newSeparator) {
+	    var replaceThis = /,/g,  // Separator to be replaced.
+		    replaceSeparator = string.replace(replaceThis, newSeparator);
+	    return replaceSeparator;
+    };
+};
+
+var numberLibrary = function () {
+	//  FORMAT DECIMAL PLACES (Format a number to use a specific number of decimal places.)
+
+    var formatDecimalPlaces = function (number, decimalPlaces) {
+	    var alterDecimalPlaces = number.toFixed(decimalPlaces);
+	    return Number(alterDecimalPlaces);
+    };
+
+//  FUZZY MATCH (Is the number above or below a number within a certain percent?)
+
+    var fuzzyMatch = function (firstNumber, secondNumber, percentageToTest) {
+	    var difference = firstNumber - secondNumber,
+		    percentDifference = difference / secondNumber,
+		    percentage = percentDifference * 100;
+	    if ((percentage === percentageToTest) || (percentage === -(percentageToTest))) {
+		    return true;
+	    } else {
+		    return false;
+	    }
+    };
+
+//  DIFFERENCE BETWEEN TWO DATES (To be more precise the hours, minutes, and seconds can be added to the dates in the form of 00:01:00.)
+
+    var daysDifference = function (date2, date1) {
+	    var futureDate = new Date(date2),
+		    mostRecentDate = new Date(date1),
+		    dayDifference = (futureDate.getTime() - mostRecentDate.getTime()),
+		    seconds = Math.floor(dayDifference / 1000),
+		    minutes = Math.floor(seconds / 60),
+		    hours = Math.floor(minutes / 60),
+		    days = Math.floor(hours / 24);
+	    return days;
+    };
+
+//  RETURN ACTUAL NUMBER VALUE OF A STRING NUMBER
+
+    var actualValue = function (stringNumber) {
+	    var numberValue = Number(stringNumber);
+	    return numberValue;
     };
 };
