@@ -57,6 +57,7 @@ var stringLibrary = function () {
     };
 };
 
+//Number Library
 var numberLibrary = function () {
 	//  FORMAT DECIMAL PLACES (Format a number to use a specific number of decimal places.)
 
@@ -98,3 +99,8 @@ var numberLibrary = function () {
 	    return numberValue;
     };
 };
+
+//Array Library
+var arrayLibrary = function () {
+	
+}
