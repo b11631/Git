@@ -65,6 +65,7 @@
 		"validatePhoneNumber": validatePhoneNumber,
 		"validateEmail": validateEmail,
 		"validateURL": validateURL,
+		"titleCaseString": titleCaseString,
 		"changeSeparator": changeSeparator,
 	    };
 	};
