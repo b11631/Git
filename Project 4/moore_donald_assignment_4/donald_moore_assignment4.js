@@ -27,7 +27,7 @@
 		    }
 	};
 	
-		 //  VALIDATE URL (Does it start with http: or https:?)
+		//VALIDATE URL (Does it start with http: or https:?)
 		//MAKE-UP: PROJECT 3 NESTED CONDITIONAL (NESTED INSIDE STRING LIBRARY FUNCTION)
 		var validateURL = function (string) {
 		    var isHttp = /^http:\/\//,  // Match http:\\ and https:\\ starting at the beginning of the string.
@@ -40,9 +40,10 @@
 		    }
 	};
 	
-		//  TITLE CASE STRING (Split into words, then uppercase the first letter of each word.)
-		// MAKE-UP: PROJECT 3 FOR LOOP
-		var titleCaseString = function (string) {  // STILL NEED TO MAKE THIS WORK PROPERLY
+		//TITLE CASE STRING (Split into words, then uppercase the first letter of each word.)
+		//MAKE-UP: PROJECT 3 FOR LOOP
+		//STILL NEED TO MAKE THIS WORK PROPERLY
+		var titleCaseString = function (string) {  
 		    var splitString = string.split(" "),
 			    newString,
 			    i;
@@ -52,8 +53,9 @@
 		    return newString;
 	};
     
-		 //  CHANGE SEPARATOR (Return a string with the first separator changed to the second.)
-		 //MAKE-UP: PROJECT 3 METHOD: MUTATOR
+		//CHANGE SEPARATOR (Return a string with the first separator changed to the second.)
+		//MAKE-UP: PROJECT 3 METHOD: MUTATOR
+		//MAKE-UP: PROJECT 3 RETURNS A STRING
 		var changeSeparator = function (string, newSeparator) {
 		    var replaceThis = /,/g,  // Separator to be replaced.
 			    replaceSeparator = string.replace(replaceThis, newSeparator);
@@ -68,15 +70,16 @@
 	};
 
 	//Number Library
+	//MAKE-UP: PROJECT 3 METHOD FUNCTION
 	var numberLibrary = function () {	
-		//  FORMAT DECIMAL PLACES (Format a number to use a specific number of decimal places.)
+		//FORMAT DECIMAL PLACES (Format a number to use a specific number of decimal places.)
 		//MAKE-UP: PROJECT 3 RETURNS A NUMBER
 		var formatDecimalPlaces = function (number, decimalPlaces) {
 		    var alterDecimalPlaces = number.toFixed(decimalPlaces);
 		    return Number(alterDecimalPlaces);
 	    };
 	
-		//  FUZZY MATCH (Is the number above or below a number within a certain percent?)
+		//FUZZY MATCH (Is the number above or below a number within a certain percent?)
 		var fuzzyMatch = function (firstNumber, secondNumber, percentageToTest) {
 		    var difference = firstNumber - secondNumber,
 			    percentDifference = difference / secondNumber,
@@ -88,7 +91,8 @@
 		    }
 	    };
 	
-		//  DIFFERENCE BETWEEN TWO DATES (To be more precise the hours, minutes, and seconds can be added to the dates in the form of 00:01:00.)
+		//DIFFERENCE BETWEEN TWO DATES (To be more precise the hours, minutes, and seconds can be added to the dates in the form of 00:01:00.)
+		//MAKE-UP: PROJECT 3 MATH
 		var daysDifference = function (date2, date1) {
 		    var futureDate = new Date(date2),
 			    mostRecentDate = new Date(date1),
@@ -100,7 +104,7 @@
 		    return days;
 	    };
 	
-		//  RETURN ACTUAL NUMBER VALUE OF A STRING NUMBER
+		//RETURN ACTUAL NUMBER VALUE OF A STRING NUMBER
 		var actualValue = function (stringNumber) {
 		    var numberValue = Number(stringNumber);
 		    return numberValue;
@@ -115,7 +119,8 @@
 
 	//Array Library
 	var arrayLibrary = function () {
-		//  SMALLEST VALUE GREATER THAN A GIVEN NUMBER (Find the smallest value in an array that is greater than a given number.)	
+		//SMALLEST VALUE GREATER THAN A GIVEN NUMBER (Find the smallest value in an array that is greater than a given number.)	
+		//MAKE-UP: PROJECT 3 ACCESSOR
 		var smallestValueGreater = function (array, number) {
 		    var numbersFound = [],
 			    greaterThanGivenNumber,
@@ -130,7 +135,8 @@
 		    return numbersFound[0];
 	    };
 	
-		//  TOTAL VALUE OF NUMBERS IN AN ARRAY (Even if some items are not numbers.)
+		//TOTAL VALUE OF NUMBERS IN AN ARRAY (Even if some items are not numbers.)
+		//MAKE-UP: PROJECT 3 NESTED LOOP(NESTED INSIDE ARRAY LIBRARY)
 		var totalValueOfArray = function (array) {
 		    var totalValue = 0,
 			    grabNumbers,
@@ -156,8 +162,11 @@
 		    return totalValue;
 	    };
 	
-		//  SORT OBJECTS WITHIN AN ARRAY BY KEY NAME
-		var sortObjectsByKey = function (array, key) {  // STILL NEED TO MAKE THIS WORK PROPERLY
+		//SORT OBJECTS WITHIN AN ARRAY BY KEY NAME
+		//MAKE-UP: PROJECT 3 RETURN OBJECT
+		//MAKE-UP: PROJECT 3 RETURN ARRAY
+		// STILL NEED TO MAKE THIS WORK PROPERLY
+		var sortObjectsByKey = function (array, key) {  
 		// Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2},{a:3},{a:1}] changes to: [{a:1},{a:2},{a:3}].
 		    var sortedArray,
 			    i;
