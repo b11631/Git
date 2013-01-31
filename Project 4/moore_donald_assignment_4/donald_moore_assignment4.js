@@ -2,10 +2,11 @@
 // January 27, 2013
 // Project 4
 //Main Data
+//MAKE-UP: PROJECT 2 CODING SYNTAX
 	// String Library
 	var stringLibrary = function () {
 		//Does a string follow a 123-456-7890 pattern like a phone number?
-		//Returns Boolean
+		//MAKE-UP: PROJECT 2 RETURNS A BOOLEAN
 		var validatePhoneNumber = function (string) {
 		    if (((string.indexOf("-") === 3) && ((string.lastIndexOf("-")) === 7)) && (string.length === 12)) {
 			    return true;
@@ -15,7 +16,8 @@
 	};
     
 		//Does a string follow an aaa@bbb.ccc pattern like an email address?
-		//Returns Boolean
+		//MAKE-UP: PROJECT 3 RETURNS A BOOLEAN
+		//MAKE-UP: PROJECT 3 CONDITIONAL
 		var validateEmail = function (string) {
 		    var isWhiteSpace = /\s+/g;  // Tests for any white space in the string.
 		    if (((string.indexOf("@") !== -1) && (isWhiteSpace.test(string) === false) && ((string.lastIndexOf(".")) === (string.length - 4)))) {
@@ -26,6 +28,7 @@
 	};
 	
 		 //  VALIDATE URL (Does it start with http: or https:?)
+		//MAKE-UP: PROJECT 3 NESTED CONDITIONAL (NESTED INSIDE STRING LIBRARY FUNCTION)
 		var validateURL = function (string) {
 		    var isHttp = /^http:\/\//,  // Match http:\\ and https:\\ starting at the beginning of the string.
 			    isHttps = /^https:\/\//,
@@ -38,6 +41,7 @@
 	};
 	
 		//  TITLE CASE STRING (Split into words, then uppercase the first letter of each word.)
+		// MAKE-UP: PROJECT 3 FOR LOOP
 		var titleCaseString = function (string) {  // STILL NEED TO MAKE THIS WORK PROPERLY
 		    var splitString = string.split(" "),
 			    newString,
@@ -49,6 +53,7 @@
 	};
     
 		 //  CHANGE SEPARATOR (Return a string with the first separator changed to the second.)
+		 //MAKE-UP: PROJECT 3 METHOD: MUTATOR
 		var changeSeparator = function (string, newSeparator) {
 		    var replaceThis = /,/g,  // Separator to be replaced.
 			    replaceSeparator = string.replace(replaceThis, newSeparator);
@@ -65,6 +70,7 @@
 	//Number Library
 	var numberLibrary = function () {	
 		//  FORMAT DECIMAL PLACES (Format a number to use a specific number of decimal places.)
+		//MAKE-UP: PROJECT 3 RETURNS A NUMBER
 		var formatDecimalPlaces = function (number, decimalPlaces) {
 		    var alterDecimalPlaces = number.toFixed(decimalPlaces);
 		    return Number(alterDecimalPlaces);
